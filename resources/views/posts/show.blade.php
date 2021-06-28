@@ -5,7 +5,7 @@
 <!--<a herf="/posts" class="btn btn-default">Go Back</a> Not responsive-->
     <h1>{{$post->title}}</h1>
     <div>
-        {{$post->body}}
+        {!!$post->body!!}<!-- To Parse Html into the textarea use single {} with !! in it -->
     </div>
     <hr>
         <small> Written On {{$post->created_at}}</small>

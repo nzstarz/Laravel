@@ -4,7 +4,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
          
-       
+        <script src="{{asset('js/app.js')}}"></script>
+
+        <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+        <script>tinymce.init({selector:'textarea'});</script>
       <!--  <link rel ="stylesheet" herf="{{'asset/css/app.css'}}"> -->
         
        <!--  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">, none of above two worked
@@ -25,8 +28,17 @@
    <body>
        @include('inc.navbar')
          <div class="container">
-            @yield('content')
+            @include('inc.messages')
+                     
+         @yield('content')
+              
+         <!--   <script src="{{ asset('ckeditor/ckeditor.js')}}"></script>
+            <script>CKEDITOR.replace('article-ckeditor');</script>, Manual Installaation of ckeditor 
+            didn't work so I had to use TinyMCE CDN-->
+
+
         </div>
-        <script src="{{asset('js/app.js')}}"></script>
+            
+        
     </body>
     </html>
