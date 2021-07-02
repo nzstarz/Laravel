@@ -15,15 +15,14 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">-->
         
         <!--<script type="text/javascript" src="{{asset('js/app.js') }}"></script>-->
+         
          <link href="{{asset('css/app.css') }}" rel="stylesheet">
          
 
         
-        
             <title>{{config('app.name', 'LSAPP')}}</title>
 
          
-       
     </head>
    <body>
        @include('inc.navbar')
