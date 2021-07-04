@@ -23,7 +23,7 @@ class PostController extends Controller
         //$posts = Post::orderBy('title', 'desc')->get();
 
         //pagination
-        $posts = Post::orderBy('created_at', 'desc')->paginate(10);
+        $posts = Post::orderBy('created_at', 'desc')->paginate(5);
         return view('posts.index')->with('posts', $posts);
     }
 
@@ -54,6 +54,7 @@ class PostController extends Controller
         $post = new Post;
         $post->title = $request->input('title');
         $post->body = $request->input('body');
+        $post->user_id =auth()->user()->id;
         $post-> save();
 
         return redirect('/posts')->with('success', 'Post Created');
