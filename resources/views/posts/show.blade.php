@@ -8,7 +8,7 @@
         {!!$post->body!!}<!-- To Parse Html into the textarea use single {} with !! in it -->
     </div>
     <hr>
-        <small> Written On {{$post->created_at}}</small>
+        <small> Written On {{$post->created_at}} by {{$post->user->name}}</small>
     </hr>
    <a href="/posts/{{$post->id}}/edit" class="btn btn-primary">Edit</a>
 
