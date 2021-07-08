@@ -4,6 +4,9 @@
 <a href="{!!url('/posts'); !!}" class="btn btn-default">Go Back</a>
 <!--<a herf="/posts" class="btn btn-default">Go Back</a> Not responsive-->
     <h1>{{$post->title}}</h1>
+    <img style= "width:100%" src ="/storage/cover_images/{{$post->cover_image}}">
+    <br>
+    <br>
     <div>
         {!!$post->body!!}<!-- To Parse Html into the textarea use single {} with !! in it -->
     </div>
